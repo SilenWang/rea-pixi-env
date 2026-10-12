@@ -1,7 +1,7 @@
 [workspace]
 channels = ["conda-forge"]
 name = "rea-pixi-env"
-platforms = ["linux-64"]
+platforms = ["linux-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks]
@@ -25,8 +25,19 @@ jq = ">=1.8.2,<2"
 python = "3.12.*"
 unzip = ">=6.0,<7"
 curl = ">=8.22.0,<9"
+coreutils = ">=9.7,<10"
 
-[pypi-dependencies]
+[target.osx-arm64.dependencies]
+# PyPI has no macOS arm64 wheel for unicorn (and keystone, needed by pwntools), so the
+# ELF/DOS provider stays linux-64-only. unicorn comes from conda-forge.
+unicorn = ">=2.1.2,<3"
+# Ghidra ships no macOS decompiler binary; build it with bison >= 3 (system bison is 2.3).
+bison = ">=3.8,<4"
+cxx-compiler = "*"
+make = "*"
+cmake = ">=3.30,<4"
+
+[target.linux-64.pypi-dependencies]
 pwntools = "==4.15.0"
 pyelftools = "==0.33"
 unicorn = "==2.1.2"
