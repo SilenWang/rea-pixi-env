@@ -1,0 +1,32 @@
+[workspace]
+channels = ["conda-forge"]
+name = "rea-pixi-env"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+fetch-ghidra = "bash scripts/fetch-ghidra.sh"
+install-rea = "npm install --global rea-agents@6.4.0"
+
+# rea: run any REA command inside the pinned Ghidra environment, e.g.
+#   pixi run rea -- analyze /path/to/binary --provider ghidra --json
+rea = "bash bin/with-rea-env.sh rea"
+doctor = "bash bin/with-rea-env.sh rea doctor --provider ghidra --json"
+providers = "bash bin/with-rea-env.sh rea providers --json"
+capabilities = "bash bin/with-rea-env.sh rea capabilities --json"
+mcp = "bash bin/with-rea-env.sh rea mcp"
+mcp-smoke = "bash bin/with-rea-env.sh python scripts/mcp-smoke.py"
+repro = { depends-on = ["fetch-ghidra", "install-rea"], cmd = "bash bin/with-rea-env.sh rea --version" }
+
+[dependencies]
+nodejs = "22.*"
+openjdk = "21.*"
+jq = ">=1.8.2,<2"
+python = "3.12.*"
+unzip = ">=6.0,<7"
+curl = ">=8.22.0,<9"
+
+[pypi-dependencies]
+pwntools = "==4.15.0"
+pyelftools = "==0.33"
+unicorn = "==2.1.2"
