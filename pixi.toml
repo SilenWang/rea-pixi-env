@@ -18,6 +18,10 @@ mcp = "bash bin/with-rea-env.sh rea mcp"
 mcp-smoke = "bash bin/with-rea-env.sh python scripts/mcp-smoke.py"
 repro = { depends-on = ["fetch-ghidra", "install-rea"], cmd = "bash bin/with-rea-env.sh rea --version" }
 
+# Re-run the QikProp 8.8 formula checks against an extracted qikprop package:
+#   pixi run qp-verify -- --data-dir /path/to/qikprop
+qp-verify = "python qikprop/verify.py"
+
 [dependencies]
 nodejs = "22.*"
 openjdk = "21.*"

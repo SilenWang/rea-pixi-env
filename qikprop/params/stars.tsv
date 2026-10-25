@@ -1,0 +1,27 @@
+// QikProp 8.8 "star" ranges ("95% of drugs"), from data/QPlimits.
+// QPlimits holds a doc line and the parsed value line; the parsed one wins (EA: -0.9, see l.44/45).
+// descriptor	lo	hi	QPlimits_line
+MW	130.0	725.0	18
+dipole	1.0	12.5	20
+SASA	300.0	1000.0	22
+FOSA	0.0	750.0	24
+FISA	7.0	330.0	26
+PISA	0.0	450.0	28
+WPSA	0.0	175.0	30
+volume	500.0	2000.0	32
+#rotor	0.0	15.0	34
+donorHB	0.0	6.0	36
+accptHB	2.0	20.0	38
+glob	0.75	0.95	40
+IP(eV)	7.9	10.5	42
+EA(eV)	-0.9	1.7	45
+QPpolrz	13.0	70.0	46
+QPlogPC16	4.0	18.0	48
+QPlogPoct	8.0	35.0	50
+QPlogPw	4.0	45.0	52
+QPlogPo/w	-2.0	6.5	54
+QPlogS	-6.5	0.5	56
+QPlogKhsa	-1.5	1.5	58
+QPlogBB	-3.0	1.2	60
+#metabol	1.0	8.0	62
+PSA	7.0	200.0	64

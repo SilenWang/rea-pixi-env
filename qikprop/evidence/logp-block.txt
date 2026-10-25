@@ -1,0 +1,27 @@
+// Ghidra 12.1.4 decompile of qikprop FUN_00414860 (main), logP block.
+// Non-hydrocarbon fit (constants are .rodata doubles, see params/logp_fit1.tsv):
+  uStack_60 = (ulong)dStack_1e00 & _UNK_0045f778;
+  local_1f31 = bVar28 & (byte)local_1cd8;
+  bVar28 = local_1cb8 + local_14c8 != local_14e8;
+  if (bVar28 || DAT_004611a8 <= local_68) {
+    if ((local_1ca8 != local_14e8) || (NAN(local_1ca8) || NAN(local_14e8))) {
+      DAT_00509640 = local_1cb8 * _DAT_0045f800;
+      DAT_00509648 = local_14c8 * _UNK_0045f808;
+      DAT_00509650 = local_1488 * _DAT_0045f810;
+      DAT_00509658 = local_808 * _UNK_0045f818;
+      DAT_00509660 = DAT_004611b8 * (double)local_1e58._0_8_ + DAT_004611b0 * local_1ca8;
+      DAT_00509668 = (double)local_1d08._4_4_ * _DAT_0045f820;
+      DAT_00509670 = (double)local_1d18._0_8_ * _UNK_0045f828;
+      DAT_00509678 = DAT_004611c8 * local_14b8 + DAT_004611c0 * local_14d8;
+      DAT_00509680 = DAT_004611d0;
+      if (local_1f31 == 0) {
+        DAT_00509680 = DAT_004611d8;
+      }
+
+// Hydrocarbon branch (0x4156aa..0x4156c6):
+  }
+  else {
+    DAT_00509650 = DAT_00461228 * local_1488;
+    DAT_00509680 = DAT_00461230;
+  }
+  DAT_005095e0 = local_1cb8 * _DAT_0045f830;

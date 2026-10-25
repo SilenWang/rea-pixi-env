@@ -1,0 +1,14 @@
+// QPlogPo/w non-hydrocarbon linear model: value = sum(coef * descriptor) + const.
+// Same numbers as data/QPmyfits l.9-49 ("o/w QPlogP"), confirmed as literals in qikprop .rodata.
+// term	coef	rodata_addr	QPmyfits_line
+const	-0.7049	0x4611d8	11
+#amine	-0.527	0x45f820	13
+#amide	-0.6256	0x45f828	19
+#acid	0.5157	0x4611b8	17
+FISA	-0.006921	0x4611b0	35
+PISA	0.001171	0x4611c8	37
+WPSA	0.003815	0x4611c0	39
+volume	0.006524	0x45f810	41
+donorHB	-0.2999	0x45f800	43
+accptHB	-0.4870	0x45f808	45
+ACxDN	44.36	0x45f818	49

@@ -1,0 +1,5 @@
+// Branches read out of main (FUN_00414860 @ 0x414860), block 0x4156aa / 0x4157ed / 0x415893.
+// branch	condition	value	code_addr	const_addr	note
+fit1	has H-bond donors/acceptors	see logp_fit1.tsv	0x4157ed..0x415834	0x4611d8	const -0.7049
+fit1_zwitterion	fit1 and #acid>0 and #amine>0	see logp_fit1.tsv, const -2.5789	0x415830..0x415893	0x4611d0	const = -0.7049 - 1.874
+hydrocarbon	no polar groups	-0.640392 + 0.009165 * volume	0x4156aa..0x4156c6	0x461230 / 0x461228	const / volume coef
